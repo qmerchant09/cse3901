@@ -1,0 +1,66 @@
+/* File created 11/1 by Gavin A 
+   File edited 11/2 by Roberto D
+   File Edited 11/3 by Gavin A: Added initial css grid layout
+   File edited 11/4 by Gavin A: Updated css-grid layout for each button 
+   File edited 11/9 by Gavin A: Added more styling for buttons*/
+
+/* Created 11/9 by Gavin A */
+input {
+  grid-area: disp;
+  text-align: right;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* Created by Roberto D */
+button {
+  border-radius:1px;
+  border-color: black;
+  background-color: gray;
+  font-size: 16px;
+  color: white;
+}
+
+/* Created 11/9 by Gavin A */
+button[name="digit"] {
+  background-color: lightgrey;
+  color:black;
+}
+
+/* Created 11/3 by Gavin A */
+.calculator {
+  display: grid;
+  grid-template-rows: 1fr, 1fr, auto, auto;
+  grid-template-columns: auto;
+  grid-template-areas:  "disp disp" 
+                        "memOps memOps" 
+                        "numOps numOps"
+                        "history memory";
+  border: 5px;
+  border-width: 5px;
+  border-color: black;
+  margin-bottom: 20px;
+}
+/* Created 11/4 by Gavin A */
+.numberOps {
+  grid-area: numOps;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  grid-template-areas:  "ce c pow divide" 
+                        "seven eight nine mult" 
+                        "four five six minus" 
+                        "one two three plus"
+                        "zero zero decimal eval";
+}
+.memoryOps {
+  grid-area: memOps;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  grid-template-areas:  "MC MR MS Mp Mm";
+}
+
+#memory, #history {
+  font-size: 20px;
+}

@@ -1,0 +1,79 @@
+<!--File created 10/29 by Quantez Merchant
+    File Edited 11/3 by Quantez Merchant: Added memory field
+    File edited 11/3 by Roberto D: Added calculator buttons table
+    File edited 11/3 by Gavin A: Switched one part to use css-grid instead of a table 
+    File edited 11/3 by Amyas D: Added Calculator turial section
+    File edited 11/4 by Gavin A: All the buttons now use css-grid 
+    File edited 11/9 by Gavin A: Added names to each button that needed one-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="stylesheets/site.css">
+    </head>
+    <body>
+        <div class="calculator">
+            <div class="display">
+                <p id = "expdisp"></p>
+                <input id ="display" type="text" value ="0" readonly> 
+            </div>
+            <div style="grid-area: memOps">
+                <button style="grid-area: MC" name="memory">MC</button>
+                <button style="grid-area: MR" name="memory">MR</button>
+                <button style="grid-area: MS" name="memory">MS</button>
+                <button style="grid-area: Mp" name="memory">M+</button>
+                <button style="grid-area: Mm" name="memory">M-</button>
+            </div>
+            <div class="numberOps">
+                <button style="grid-area: ce" name="clearE">CE</button>
+                <button style="grid-area: c" name="clear">C</button>
+                <button style="grid-area: pow" name="operator">^</button>
+                <button style="grid-area: seven" name="digit">7</button>
+                <button style="grid-area: eight" name="digit">8</button>
+                <button style="grid-area: nine" name="digit">9</button>
+                <button style="grid-area: divide" name="operator">/</button>
+                <button style="grid-area: four" name="digit">4</button>
+                <button style="grid-area: five" name="digit">5</button>
+                <button style="grid-area: six" name="digit">6</button>
+                <button style="grid-area: mult" name="operator">*</button>
+                <button style="grid-area: one" name="digit">1</button>
+                <button style="grid-area: two" name="digit">2</button>
+                <button style="grid-area: three" name="digit">3</button>
+                <button style="grid-area: minus" name="operator">-</button>
+                <button style="grid-area: eval" name="eval">=</button>
+                <button style="grid-area: zero" name="digit">0</button>
+                <button style="grid-area: decimal" name="operator">.</button>
+                <button style="grid-area: plus" name="operator">+</button>
+            </div>
+            <p style="border: 2px; border-color: black; grid-area: history">
+                <strong style="text-align: center">HISTORY</strong><br>
+                <em id="history"></em>
+            </p>
+            <p style="border: 2px; border-color: black; grid-area: memory">
+                <strong style="text-align: center">MEMORY</strong><br>
+                <em id="memory"></em>
+            </p>
+        </div>
+        <!-- This section will be dedicated the calculator tutorial -->
+        <div class="tutorial">
+            <h2>Calculator Tutorial</h2> <br>
+            <dl>
+                    <dt>Entering an Expression</dt>
+                        <dd>To enter an expression, hit the number buttons(0-9) and operator buttons(+-*/). <br> You can also use the subtraction operator as a negative. <br>Once you have finished creating your expression, hit the = button to get your result.</dd>
+                    <dt>Clearing an Element (CE)</dt>
+                        <dd>Clears the last element currently displayed on the calculator.</dd>
+                    <dt>Clearing the Display (C)</dt>
+                        <dd>Clears the full expression currently displayed/being calculated including the latest element.</dd>
+                    <dt>Display History/Memory</dt>
+                        <dd>On the right side of the screen are two areas where your memory and history are stored. <br>After every expression is entered, it is stored in the history. <br>To store a value currently on the display into memory hit the MS button. </dd>
+                    <dt>Adding to Memory (MC, MS, MR, M+, M-)</dt>
+                        <dd>MC : Clears all entries from memory.</dd>
+                        <dd>MS : Saves the current number displayed to the screen into memory.</dd>
+                        <dd>MR : Displays the most recent value in memory</dd>
+                        <dd>M+ : Adds the current value on screen to the most recent memory entry.</dd>
+                        <dd>M- : Subtracts the current value on screen from the most recent memory entry</dd>
+            </dl>
+        </div>
+        <script src="javascripts/operators.js"></script>
+    </body>
+</html>
