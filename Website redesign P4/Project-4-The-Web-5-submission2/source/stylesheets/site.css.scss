@@ -1,0 +1,336 @@
+/* File created 10/18 by Gavin A 
+File edited 10/18 by Quantez Merchant: Added navbar css
+File edited 10/20 by Quantez Merchant: Added CSS to replace outdated html tags 
+File edited 10/20 by Gavin A: Added css grid layout 
+File edited 10/20 by Roberto: Publications page css
+File edited 10/20 by Quantez Merchant: Added materials css and removed some css
+File edited 10/23 by Amyas Dawson: Moved landing page css to its own file and edited .header class within this file
+File edited 10/23 by Quantez Merchant: Edited comments, added css
+File edited 10/23 by Gavin A: Added more css-grid styling for boxes containing directions 
+File edited 10/23 by Roberto D: Added publications page css, changed navbar font color to white
+*/
+
+/* Written by Quantez Merchant: Changes the default background and text color of the body */
+body {
+  font-family: Arial;
+  color: black;             
+  background-color: white; 
+}
+
+/* Written by Quantez Merchant: Changes the default color of links and its states */
+a:link {color: #808080}       
+a:visited {color: #808080}    
+a:active {color: #FF0000} 
+
+/* Written by Quantez Merchant: Removes the bullet points and adds formatting to the navbar */
+/* Edited 10/23 by Roberto D: Change font color to white */
+.navbar ul {
+  list-style-type: none;        
+  margin: 10px 0px;             
+  padding: 0;                   
+  border-style: solid;          
+  border-width: 1px;          
+  background-color: #8F1001;
+  overflow: hidden;             
+}
+/* Written by Quantez Merchant: Makes the navbar horizontal and adds more formatting to the navbar */
+.navbar li {
+  float: left;                  
+  width: 24.9%;                 
+  border-right: 1px solid;      
+} 
+/* Written by Quantez Merchant */
+.navbar li:last-child {border-right: none;}
+
+/* Written by Quantez Merchant: Adds more formatting to the navbar */
+.navbar li a {
+  display: block;               
+  color: white;    
+  text-align: center;           
+  padding: 14px;                
+  text-decoration: none;        
+  transition: .4s;              
+}
+/* Written by Quantez Merchant */
+.navbar li a:hover {
+  background-color: white;
+  color:black; 
+} 
+
+/* Written by Quantez Merchant: Centers and formats the text in the centertext class */
+.centertext{
+  text-align: center;           
+  color: black;             
+  font-size: 2em;               
+  padding: 0;
+}
+
+/* Written by Quantez Merchant: Formats the dropdown-content class  */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #8e0f01;
+  width: 24.9%;
+  box-shadow: 0px 8px 16px 0px #00000033;
+  z-index: 1;
+}
+/* Written by Quantez Merchant*/
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Written by Quantez Merchant: Centers and adds formatting to all table tags in the centertable class */
+.centertable table{
+  text-align: center;             
+  color: black;              
+  padding: 5px;                     
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/* Written by Quantez Merchant */
+.centertable table, .centertable td,.centertable th{border: 2px solid;}
+
+/* Written by Quantez Merchant */
+.centertable td,.centertable th{padding: 9px;}
+
+/* Written by Quantez Merchant: Adds formatting to all table and td tags in the mattable class */
+.mattable table, .mattable td{
+  padding: 8px;                     
+  border-spacing: 0;
+  border: 0;
+}
+/* Written by Quantez Merchant */
+.mattable,.centertable{
+  grid-area: main;
+}
+/* Written by Quantez Merchant */
+.centertable{
+  margin-bottom: 50px;
+}
+
+/* Written by Quantez Merchant */
+.dropdowns,.centertext {grid-area: main;}
+ 
+/* Written by Quantez Merchant: Adds formatting to all details tags in the dropdowns class */
+.dropdowns details {
+  border-left: 10px solid #8e0f01;
+  border-radius: 4px;
+  margin: 2em 0em;
+  padding: .5em .5em 0;
+  cursor: pointer;
+  background-color: #b9b5b5;
+}
+
+/*Amyas Dwason*/
+.dropdowns details-sub {
+  border-left: 10px solid #8e0f01;
+  border-radius: 4px;
+  margin: 2em 0em;
+  padding: .5em .5em 0;
+  cursor: pointer;
+  background-color: #b9b5b5;
+}
+
+/* Written by Quantez Merchant: Adds formatting to all summary tags in the dropdowns class */
+.dropdowns summary {
+  font-weight: bold;
+  margin: -.5em -.5em 0;
+  padding: .5em;
+}
+
+/* Written by Amyas D: Formating for Subcategories within Media Section of homepage*/
+.dropdowns summary-sub {
+  font-weight: bold;
+  font-size: .75em;
+  margin: -.75em -.75em 0;
+  padding: .75em;
+}
+/* Written by Quantez Merchant: Adds formatting to all details tags when open in the dropdowns class */
+.dropdowns details[open] {
+  padding: .5em;
+  background-color: white;
+  border: 1px solid black;
+  cursor: default;
+}
+
+/*Amyas Dawson*/
+.dropdowns details-sub[open] {
+  padding: .75em;
+  background-color: white;
+  border: 1px solid black;
+  cursor: default;
+}
+
+/* Written by Quantez Merchant: Adds formatting to all summary tags when details is open in the dropdowns class */
+.dropdowns details[open] summary {
+  border-left: 10px solid #8e0f01;
+  background-color: #b9b5b5;
+  border-bottom: 1px solid #aaa;
+  margin-bottom: .5em;
+  cursor: pointer;
+}
+
+/*Amyas Dawson */
+.dropdowns details[open] summary-sub {
+  border-left: 10px solid #8e0f01;
+  background-color: #b9b5b5;
+  border-bottom: 1px solid #aaa;
+  margin-bottom: .3em;
+  cursor: pointer;
+}
+
+
+/* Written 10/20 by Gavin A */
+/* Creates a grid with 4 rows for each page */
+.grid {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  grid-template-areas:  "hd" "nv" "main" "ft";
+}
+
+/* Created 10/23 by Gavin A: puts the navbar in the second grid row */
+.navbar { grid-area: nv; }
+
+/* Written 10/23 by Gavin A: Creates a subgrid to hold the 5 containers for the contact page */
+.subgrid {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  column-gap: 5px;
+  grid-template-areas: 
+    "tp tp tp tp tp"
+    "d1 d2 d3 d4 d5"
+    ". ed ed ed .";
+  text-align: center;
+}
+
+/* Created 10/23 by Gavin A: Sets the style for the boxes containing directions in contact.html */
+.d1, .d2, .d3, .d4, .d5 {
+  border: #504d4d;
+  background-color:#000000;
+  color: white;
+  line-height:1.5em;
+  border-radius: 1px;
+  border-style: groove;
+  padding: 5px;
+  margin: 30px 0px;
+}
+/* Created 10/23 by Gavin A */
+.top, .end {
+  line-height: 1.5em;
+  color: black;
+}
+/* Created 10/23 by Gavin A */
+.end li{ margin-bottom: 1.5em; }
+
+/* Created 10/23 by Gavin A */
+.end img { max-width: 75%; }
+
+/* Created 10/23 by Gavin A: Sets the grid area for each section in contact.html.erb */
+.top { grid-area: tp;}
+.d1 { grid-area: d1; }
+.d2 { grid-area: d2; }
+.d3 { grid-area: d3; }
+.d4 { grid-area: d4; }
+.d5 { grid-area: d5; }
+.end { grid-area: ed; }
+
+/* Written 10/20 by Gavin A: Formats every h1 tag to be red, centered, and bold */
+h1 {
+  color: #ba0c2f;
+  text-align: center;
+  font-weight: bold;
+  font-size: 3ch;
+  margin-top: 40px;
+}
+  
+/* Written 10/20 by Gavin A: Formatting for the header
+Edited 10/23 by Amyas Dawson: Added to .header class
+Applies to all tags in the header class */
+.header{
+  grid-area: hd;
+  background-color:#808080;
+  padding:5px;
+}
+
+.header img {
+  width:350px; 
+  height:auto; 
+  float: left;
+}
+/* Edited 10/24 by Roberto D: Added padding */
+.header h1{
+  margin-top: 0px; 
+  font-size:1.5em; 
+  font-family:arial; 
+  color:white; 
+  float:left;
+  padding: 50px;
+}
+
+/* Written 10/20 by Gavin A: Formatting for the footer
+/* Edited 10/23 by Roberto D: Added padding, background color, and font color
+Applies to all tags in the footer class */
+.footer{
+  padding: 20px;
+  grid-area: ft;
+  background-color: dimgray;
+  color: white;
+}
+/* Written 10/23 by Gavin A: Formats the 2022 materials body to the main grid area */
+.syllabus { grid-area: main; }
+
+.collapsible {
+  background-color: #808080;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+/* Written 10/20 by Roberto */
+/* Applies style to publications table */
+.pubtable{
+  width: 80%;
+  table-layout: fixed;
+}
+/* Written 10/23 by Roberto */
+.pubtable tr{
+  height: 100px;
+}
+/* Written 10/20 by Roberto D. Alternates font colors*/
+/* Applies the listed styles to cells in publications table */
+.pubtable tr:nth-child(even) td:nth-child(odd){
+  color: #505050;
+  width: 40%;
+}
+/* Applies the listed styles to cells in publications table */
+.pubtable tr:nth-child(even) td:nth-child(even){
+  color: darkred;
+  width: 40%;
+}
+/* Applies the listed styles to cells in publications table */
+.pubtable tr:nth-child(odd) td:nth-child(odd){
+  color: darkred;
+  width: 40%;
+}
+/* Applies the listed styles to cells in publications table */
+.pubtable tr:nth-child(odd) td:nth-child(even){
+  color: #505050;
+  width: 40%;
+}

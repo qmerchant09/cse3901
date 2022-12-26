@@ -1,0 +1,52 @@
+<!-- File edited 10/18 by Quantez Merchant: Added the navigation bar 
+  File edited 10/20 by Gavin A: Changed the title
+  File edited 10/23 by Amyas Dawson: Added to header div
+  File edited 10/21 by Quantez M: Added a dropdown to teaching in navbar
+  File edited 10/23 by Roberto D: Added footer, icons link
+  File edited 10/23 by Gavin A: Fixed invalid css styling 
+                                Fixed header sizing-->
+<!doctype html>
+<html lang ="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title><%= current_page.data.title || "Jim Davis" %></title>
+    <%= tag :link, :href => "stylesheets/site.css", :rel => "stylesheet" %>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body class="grid">
+  <!-- Written by Amyas D 
+      Edoted 10/24 by Gavin A: Fixed formatting issue -->
+    <div class="header">
+      <img src="images/JimDavis.jpg" alt="Jim Davis">
+      <h1>Jim Davis<br><br>Ph.D. MIT, 2000<br><br>The Ohio State University </h1>
+    </div>
+    <!-- Written by Quantez Merchant -->
+    <div class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li class="dropdown"><a href="teaching.html">Teaching</a>
+          <div class="dropdown-content">
+            <a href="materials2022.html">CSE 5524</a>
+          </div>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul> 
+    </div>
+    <%= yield %>
+    <!-- Written by Roberto D -->
+    <div class="footer">
+      <p>
+        Jim Davis Ph.D. MIT, 2000<br>
+        491 Dreese Laboratories, 2015 Neil Avenue<br>
+        Ohio State University<br>
+        Columbus, OH 43210<br>
+        davis.1719@osu.edu<br>
+      </p>
+    </div>
+  </body>
+</html>
